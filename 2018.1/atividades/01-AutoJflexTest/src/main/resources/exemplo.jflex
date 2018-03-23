@@ -29,8 +29,12 @@ integer			= {digit}+
 alphanumeric	= {digit} | {letter}
 identifier		= ({letter} | [_])({alphanumeric} | [_])*
 whitespace		= [ \n\t\r\f]
-operators		= [
+operators		= "&&" | "==" | "<" || "!=" || "+" || "-" || "*" || "!"
 
+%%
+
+{identifier}	{System.out.println("ID");}
+{operators}		{System.out.println("Operador: " + yytext());}
     
 /* Insira as regras léxicas no espaço acima */     
      
