@@ -33,9 +33,13 @@ public class Minijava {
    * Translates characters to character classes
    */
   private static final String ZZ_CMAP_PACKED = 
-    "\11\0\1\0\1\5\1\5\1\5\1\5\22\0\1\0\5\0\1\3"+
-    "\11\0\12\2\3\0\1\4\3\0\32\1\4\0\1\1\1\0\32\1"+
-    "\12\0\1\5\u1fa2\0\1\5\1\5\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\udfe6\0";
+    "\11\0\1\3\1\3\1\41\1\3\1\3\22\0\1\3\1\27\4\0"+
+    "\1\24\1\0\1\30\1\30\1\26\1\26\1\30\1\26\1\31\1\0"+
+    "\12\2\1\0\1\30\1\26\1\25\3\0\22\1\1\20\7\1\1\30"+
+    "\1\0\1\30\1\0\1\1\1\0\1\11\1\22\1\32\1\35\1\7"+
+    "\1\10\1\21\1\16\1\14\2\1\1\12\1\37\1\17\1\23\1\33"+
+    "\1\1\1\5\1\13\1\4\1\6\1\36\1\15\1\34\1\40\1\1"+
+    "\1\30\1\0\1\30\7\0\1\41\u1fa2\0\1\41\1\41\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\udfe6\0";
 
   /** 
    * Translates characters to character classes
@@ -48,10 +52,14 @@ public class Minijava {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\1\2\2\1\1\3\1\4";
+    "\1\0\1\1\1\2\1\3\1\4\13\2\1\1\1\5"+
+    "\2\6\1\5\4\2\1\7\10\2\1\10\22\2\1\11"+
+    "\1\2\1\12\7\2\1\13\1\14\11\2\1\15\1\16"+
+    "\7\2\1\17\1\2\1\20\1\2\1\21\1\22\2\2"+
+    "\1\23\1\24\13\0\1\25";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[7];
+    int [] result = new int[105];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -76,10 +84,23 @@ public class Minijava {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\6\0\14\0\22\0\30\0\6\0\6";
+    "\0\0\0\42\0\104\0\146\0\210\0\252\0\314\0\356"+
+    "\0\u0110\0\u0132\0\u0154\0\u0176\0\u0198\0\u01ba\0\u01dc\0\u01fe"+
+    "\0\u0220\0\u0242\0\42\0\u0242\0\42\0\u0264\0\u0286\0\u02a8"+
+    "\0\u02ca\0\42\0\u02ec\0\u030e\0\u0330\0\u0352\0\u0374\0\u0396"+
+    "\0\u03b8\0\u03da\0\104\0\u03fc\0\u041e\0\u0440\0\u0462\0\u0484"+
+    "\0\u04a6\0\u04c8\0\u04ea\0\u050c\0\u052e\0\u0550\0\u0572\0\u0594"+
+    "\0\u05b6\0\u05d8\0\u05fa\0\u061c\0\u063e\0\104\0\u0660\0\104"+
+    "\0\u0682\0\u06a4\0\u06c6\0\u06e8\0\u070a\0\u072c\0\u074e\0\104"+
+    "\0\104\0\u0770\0\u0792\0\u07b4\0\u07d6\0\u07f8\0\u081a\0\u083c"+
+    "\0\u085e\0\u0880\0\104\0\104\0\u08a2\0\u08c4\0\u08e6\0\u0908"+
+    "\0\u092a\0\u094c\0\u096e\0\104\0\u0990\0\104\0\u09b2\0\104"+
+    "\0\104\0\u09d4\0\u09f6\0\104\0\104\0\u0a18\0\u0a3a\0\u0a5c"+
+    "\0\u0a7e\0\u0aa0\0\u0ac2\0\u0ae4\0\u0b06\0\u0b28\0\u0b4a\0\u0b6c"+
+    "\0\42";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[7];
+    int [] result = new int[105];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -102,11 +123,86 @@ public class Minijava {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\1\2\1\4\1\5\1\6\7\0\2\3"+
-    "\6\0\1\7\6\0\1\7\1\0";
+    "\1\2\1\3\1\4\1\5\1\6\1\7\1\3\1\10"+
+    "\1\11\1\3\1\12\1\13\1\14\1\15\1\3\1\16"+
+    "\1\17\1\3\1\20\1\3\1\21\1\22\1\23\1\24"+
+    "\2\25\1\26\1\27\2\3\1\30\1\31\1\3\1\32"+
+    "\43\0\2\3\1\0\20\3\6\0\7\3\3\0\1\4"+
+    "\42\0\1\5\37\0\2\3\1\0\1\3\1\33\10\3"+
+    "\1\34\5\3\6\0\7\3\2\0\2\3\1\0\3\3"+
+    "\1\35\14\3\6\0\7\3\2\0\2\3\1\0\6\3"+
+    "\1\36\11\3\6\0\2\3\1\37\4\3\2\0\2\3"+
+    "\1\0\5\3\1\40\12\3\6\0\7\3\2\0\2\3"+
+    "\1\0\3\3\1\41\14\3\6\0\7\3\2\0\2\3"+
+    "\1\0\1\42\17\3\6\0\7\3\2\0\2\3\1\0"+
+    "\4\3\1\43\6\3\1\44\4\3\6\0\7\3\2\0"+
+    "\2\3\1\0\12\3\1\45\5\3\6\0\7\3\2\0"+
+    "\2\3\1\0\3\3\1\46\14\3\6\0\7\3\2\0"+
+    "\2\3\1\0\1\47\17\3\6\0\6\3\1\50\2\0"+
+    "\2\3\1\0\17\3\1\51\6\0\7\3\25\0\1\23"+
+    "\42\0\1\23\15\0\2\3\1\0\6\3\1\52\11\3"+
+    "\6\0\7\3\2\0\2\3\1\0\2\3\1\53\15\3"+
+    "\6\0\7\3\2\0\2\3\1\0\17\3\1\54\6\0"+
+    "\7\3\2\0\2\3\1\0\5\3\1\55\12\3\6\0"+
+    "\7\3\2\0\2\3\1\0\2\3\1\56\15\3\6\0"+
+    "\7\3\2\0\2\3\1\0\10\3\1\57\7\3\6\0"+
+    "\7\3\2\0\2\3\1\0\1\60\17\3\6\0\7\3"+
+    "\2\0\2\3\1\0\7\3\1\61\10\3\6\0\7\3"+
+    "\2\0\2\3\1\0\1\62\17\3\6\0\7\3\2\0"+
+    "\2\3\1\0\6\3\1\63\11\3\6\0\7\3\2\0"+
+    "\2\3\1\0\13\3\1\64\4\3\6\0\7\3\2\0"+
+    "\2\3\1\0\5\3\1\65\12\3\6\0\7\3\2\0"+
+    "\2\3\1\0\1\66\17\3\6\0\7\3\2\0\2\3"+
+    "\1\0\10\3\1\67\7\3\6\0\7\3\2\0\2\3"+
+    "\1\0\11\3\1\70\6\3\6\0\7\3\2\0\2\3"+
+    "\1\0\1\3\1\71\16\3\6\0\7\3\2\0\2\3"+
+    "\1\0\7\3\1\72\10\3\6\0\7\3\2\0\2\3"+
+    "\1\0\17\3\1\73\6\0\7\3\2\0\2\3\1\0"+
+    "\5\3\1\74\12\3\6\0\7\3\2\0\2\3\1\0"+
+    "\16\3\1\75\1\3\6\0\7\3\2\0\2\3\1\0"+
+    "\10\3\1\76\7\3\6\0\7\3\2\0\2\3\1\0"+
+    "\10\3\1\77\7\3\6\0\7\3\2\0\2\3\1\0"+
+    "\3\3\1\100\14\3\6\0\7\3\2\0\2\3\1\0"+
+    "\7\3\1\101\10\3\6\0\7\3\2\0\2\3\1\0"+
+    "\2\3\1\102\15\3\6\0\7\3\2\0\2\3\1\0"+
+    "\3\3\1\43\14\3\6\0\7\3\2\0\2\3\1\0"+
+    "\3\3\1\103\14\3\6\0\7\3\2\0\2\3\1\0"+
+    "\7\3\1\56\10\3\6\0\7\3\2\0\2\3\1\0"+
+    "\15\3\1\104\2\3\6\0\7\3\2\0\2\3\1\0"+
+    "\1\105\17\3\6\0\7\3\2\0\2\3\1\0\6\3"+
+    "\1\61\11\3\6\0\7\3\2\0\2\3\1\0\10\3"+
+    "\1\106\7\3\6\0\7\3\2\0\2\3\1\0\1\107"+
+    "\17\3\6\0\7\3\2\0\2\3\1\0\6\3\1\110"+
+    "\11\3\6\0\7\3\2\0\2\3\1\0\7\3\1\111"+
+    "\10\3\6\0\7\3\2\0\2\3\1\0\6\3\1\112"+
+    "\11\3\6\0\7\3\2\0\2\3\1\0\20\3\6\0"+
+    "\3\3\1\113\3\3\2\0\2\3\1\0\13\3\1\114"+
+    "\4\3\6\0\7\3\2\0\2\3\1\0\1\3\1\115"+
+    "\16\3\6\0\7\3\2\0\2\3\1\0\13\3\1\116"+
+    "\4\3\6\0\7\3\2\0\2\3\1\0\1\117\17\3"+
+    "\6\0\7\3\2\0\2\3\1\0\10\3\1\120\7\3"+
+    "\6\0\7\3\2\0\2\3\1\0\13\3\1\121\4\3"+
+    "\6\0\7\3\2\0\2\3\1\0\3\3\1\122\14\3"+
+    "\6\0\7\3\2\0\2\3\1\0\3\3\1\123\14\3"+
+    "\6\0\7\3\2\0\2\3\1\0\7\3\1\124\10\3"+
+    "\6\0\7\3\2\0\2\3\1\0\10\3\1\125\7\3"+
+    "\6\0\7\3\2\0\2\3\1\0\13\3\1\126\4\3"+
+    "\6\0\7\3\2\0\2\3\1\0\20\3\6\0\3\3"+
+    "\1\127\3\3\2\0\2\3\1\0\12\3\1\130\5\3"+
+    "\6\0\7\3\2\0\2\3\1\0\20\3\6\0\1\131"+
+    "\6\3\2\0\2\3\1\0\15\3\1\66\2\3\6\0"+
+    "\7\3\2\0\2\3\1\0\20\3\6\0\5\3\1\132"+
+    "\1\3\2\0\2\3\1\0\5\3\1\133\12\3\6\0"+
+    "\7\3\2\0\2\3\1\0\20\3\6\0\1\134\6\3"+
+    "\2\0\2\3\1\0\7\3\1\135\10\3\6\0\7\3"+
+    "\2\0\2\3\1\0\20\3\5\0\1\136\7\3\2\0"+
+    "\2\3\1\0\13\3\1\66\4\3\6\0\7\3\24\0"+
+    "\1\137\24\0\1\140\37\0\1\141\66\0\1\142\43\0"+
+    "\1\143\13\0\1\144\50\0\1\145\44\0\1\146\26\0"+
+    "\1\147\47\0\1\150\46\0\1\151\22\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[30];
+    int [] result = new int[2958];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -144,10 +240,11 @@ public class Minijava {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\3\1\2\11";
+    "\1\0\1\11\20\1\1\11\1\1\1\11\4\1\1\11"+
+    "\103\1\13\0\1\11";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[7];
+    int [] result = new int[105];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -246,7 +343,7 @@ public class Minijava {
     char [] map = new char[0x110000];
     int i = 0;  /* index in packed string  */
     int j = 0;  /* index in unpacked array */
-    while (i < 84) {
+    while (i < 170) {
       int  count = packed.charAt(i++);
       char value = packed.charAt(i++);
       do map[j++] = value; while (--count > 0);
@@ -613,19 +710,87 @@ public class Minijava {
           case 1: 
             { throw new RuntimeException("Caractere ilegal! '" + yytext() + "' na linha: " + yyline + ", coluna: " + yycolumn);
             }
-          case 5: break;
+          case 22: break;
           case 2: 
-            { System.out.println("ID");
+            { numberIDs++; System.out.println("ID: " + yytext() + "NUMBER: " + numberIDs);
             }
-          case 6: break;
+          case 23: break;
           case 3: 
-            { System.out.print(yytext());
+            { System.out.println("NUMBER: " + yytext());
             }
-          case 7: break;
+          case 24: break;
           case 4: 
+            { 
+            }
+          case 25: break;
+          case 5: 
+            { System.out.println("DELIMITER: " + yytext());
+            }
+          case 26: break;
+          case 6: 
             { System.out.println("Operador: " + yytext());
             }
-          case 8: break;
+          case 27: break;
+          case 7: 
+            { System.out.print(yytext());
+            }
+          case 28: break;
+          case 8: 
+            { System.out.println("CONDITIONAL: " + yytext());
+            }
+          case 29: break;
+          case 9: 
+            { System.out.println("TYPE: " + yytext());
+            }
+          case 30: break;
+          case 10: 
+            { System.out.println("WORD: new");
+            }
+          case 31: break;
+          case 11: 
+            { System.out.println("BOOLEAN: " + yytext());
+            }
+          case 32: break;
+          case 12: 
+            { System.out.println("WORD: this");
+            }
+          case 33: break;
+          case 13: 
+            { System.out.println("WORD: void");
+            }
+          case 34: break;
+          case 14: 
+            { System.out.println("WORD: main");
+            }
+          case 35: break;
+          case 15: 
+            { System.out.println("WORD: class");
+            }
+          case 36: break;
+          case 16: 
+            { System.out.println("WORD: return");
+            }
+          case 37: break;
+          case 17: 
+            { System.out.println("WORD: length");
+            }
+          case 38: break;
+          case 18: 
+            { System.out.println("WORD: static");
+            }
+          case 39: break;
+          case 19: 
+            { System.out.println("WORD: public");
+            }
+          case 40: break;
+          case 20: 
+            { System.out.println("WORD: extends");
+            }
+          case 41: break;
+          case 21: 
+            { System.out.println("WORD: System.out.println");
+            }
+          case 42: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

@@ -2,7 +2,7 @@ package atividade1;
 
 %%
 
-/* Não altere as configurações a seguir */
+/* Nï¿½o altere as configuraï¿½ï¿½es a seguir */
 
 %line
 %column
@@ -13,7 +13,7 @@ package atividade1;
 %class Minijava
 %eofclose
 
-/* Insira as regras léxicas abaixo */
+/* Insira as regras lï¿½xicas abaixo */
 
 %{
 	int numberIDs = 0;
@@ -28,14 +28,40 @@ digit 			= [0-9]
 integer			= {digit}+
 alphanumeric	= {digit} | {letter}
 identifier		= ({letter} | [_])({alphanumeric} | [_])*
-whitespace		= [ \n\t\r\f]
-operators		= "&&" | "==" | "<" || "!=" || "+" || "-" || "*" || "!"
+whitespace		= [ \n\t\r\f]+
+boolean			= "true" | "false"
+conditions		= "if" | "else" | "while"
+tipo 			= "int" | "String" | "boolean"
+operators		= "&&" | "==" | "<" | "!=" | "+" | "-" | "*" | "!"
+delimiters		= "," | ";" | "." | "=" | "(" | ")" | "{" | "}" | "[" | "]"  
 
 %%
 
-{identifier}	{System.out.println("ID");}
+/* Palavaras reservadas */
+
+"class"					{System.out.println("WORD: class");}
+"public"				{System.out.println("WORD: public");}
+"extends"				{System.out.println("WORD: extends");}
+"static"				{System.out.println("WORD: static");}
+"void"					{System.out.println("WORD: void");}
+"main"					{System.out.println("WORD: main");}
+"return"				{System.out.println("WORD: return");}
+"length"				{System.out.println("WORD: length");}
+"this"					{System.out.println("WORD: this");}
+"new"					{System.out.println("WORD: new");}
+"System.out.println"	{System.out.println("WORD: System.out.println");}
+
+{boolean}		{System.out.println("BOOLEAN: " + yytext());}
+{tipo}			{System.out.println("TYPE: " + yytext());}
+{conditions}	{System.out.println("CONDITIONAL: " + yytext());}
+{integer}		{System.out.println("NUMBER: " + yytext());}
+
+{whitespace}	{ }
+
+{identifier}	{numberIDs++; System.out.println("ID: " + yytext() + "NUMBER: " + numberIDs);}
 {operators}		{System.out.println("Operador: " + yytext());}
+{delimiters}	{System.out.println("DELIMITER: " + yytext());}
     
-/* Insira as regras léxicas no espaço acima */     
+/* Insira as regras lï¿½xicas no espaï¿½o acima */     
      
 . { throw new RuntimeException("Caractere ilegal! '" + yytext() + "' na linha: " + yyline + ", coluna: " + yycolumn); }
