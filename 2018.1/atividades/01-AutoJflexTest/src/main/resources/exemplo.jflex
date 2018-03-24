@@ -29,6 +29,9 @@ integer			= {digit}+
 alphanumeric	= {digit} | {letter}
 identifier		= ({letter} | [_])({alphanumeric} | [_])*
 whitespace		= [ \n\t\r\f]+
+singlecomment	= "//"[^\n]*
+multiplecomment	= "/*"~"*/"
+comment			= {singlecomment} | {multiplecomment}
 boolean			= "true" | "false"
 conditions		= "if" | "else" | "while"
 tipo 			= "int" | "String" | "boolean"
@@ -57,8 +60,9 @@ delimiters		= "," | ";" | "." | "=" | "(" | ")" | "{" | "}" | "[" | "]"
 {integer}		{System.out.println("NUMBER: " + yytext());}
 
 {whitespace}	{ }
+{comment}		{ }
 
-{identifier}	{numberIDs++; System.out.println("ID: " + yytext() + "NUMBER: " + numberIDs);}
+{identifier}	{numberIDs++; System.out.println("ID: " + yytext() + " NUMBER: " + numberIDs + " Linha: " + yyline + " Coluna: " + yycolumn);}
 {operators}		{System.out.println("Operador: " + yytext());}
 {delimiters}	{System.out.println("DELIMITER: " + yytext());}
     
